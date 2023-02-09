@@ -6,6 +6,7 @@ import "./ExpenseItem.css";
 //43. An Alternative Function Syntax, e.g: const App = () => {
 const ExpenseItem = (props) => {
   const [title, seTitle] = useState(props.title);
+  console.log("expenseItem evaluated by React");
   const clickHandler = () => {
     seTitle("Updated!");
     console.log(title);
