@@ -5,6 +5,9 @@ import "./ExpenseItem.css";
 
 //43. An Alternative Function Syntax, e.g: const App = () => {
 const ExpenseItem = (props) => {
+  const clickHandler = () => {
+    console.log("Clicked");
+  };
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -12,6 +15,14 @@ const ExpenseItem = (props) => {
         <h2>{props.title}</h2>
       </div>
       <div className="expense-item__price">${props.amount}</div>
+      {/* <button
+        onClick={() => {
+          console.log("Clicked");
+        }}
+      >
+        Change Title
+      </button> */}
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 };
